@@ -1,10 +1,12 @@
 import java.time.LocalDate;
 
 public class Alimenticio extends Producto {
-    protected LocalDate fechaVencimiento;
+    protected String fechaVencimiento;
+    protected String refrigeracion;
 
-    public Alimenticio(String nombre, Double precioVenta, int cantidadStock, String proveedores, int tiempoReposicion, String localizacionEnTienda, int demandaCliente, LocalDate fechaVencimiento) {
-        super(nombre, precioVenta, cantidadStock, proveedores, tiempoReposicion, localizacionEnTienda, demandaCliente);
+    public Alimenticio(String nombre, Double precioVenta, int cantidadStock, Proveedor proveedor, int tiempoReposicion, String localizacionEnTienda, int demandaCliente, String fechaVencimiento, String refrigeracion) {
+        super(nombre, precioVenta, cantidadStock, proveedor, tiempoReposicion, localizacionEnTienda, demandaCliente);
         this.fechaVencimiento = fechaVencimiento;
+        this.refrigeracion = refrigeracion;
     }
 }
